@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Server, Lock, Check, AlertCircle, RefreshCw, Save, Eye, EyeOff } from 'lucide-react';
+import { Mail, Server, Lock, Check, AlertCircle, RefreshCw, Save, Eye, EyeOff, Clock, Globe } from 'lucide-react';
 
 const EmailConfig = () => {
   const [config, setConfig] = useState({
@@ -14,7 +14,16 @@ const EmailConfig = () => {
     folders: 'INBOX',
     search_subjects: 'LPO,Purchase Order,PO,Local Purchase Order',
     unseen_only: true,
-    active: true
+    active: true,
+    // New time configuration fields
+    check_lookback_hours: 24,
+    server_timezone_offset: 0,
+    auto_detect_timezone: true,
+    force_local_time: true,
+    // Daily cutoff time fields
+    daily_cutoff_time: '17:00',
+    skip_weekends: true,
+    cutoff_timezone: 'local'
   });
 
   const [testStatus, setTestStatus] = useState(null);
@@ -265,6 +274,142 @@ const EmailConfig = () => {
                   />
                   <span className="text-sm">Use TLS</span>
                 </label>
+              </div>
+            </div>
+          </div>
+
+          {/* Cutoff Time Settings */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Clock className="w-5 h-5" />
+              Daily Cutoff Time Settings
+            </h3>
+            
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Daily Order Cutoff Time
+                </label>
+                <input
+                  type="time"
+                  value={config.daily_cutoff_time}
+                  onChange={(e) => handleChange('daily_cutoff_time', e.target.value)}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <p className="text-xs text-gray-500 mt-1">
+                  Time when daily orders stop being accepted (e.g., 17:00 for 5:00 PM)
+                </p>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <label className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={config.skip_weekends}
+                    onChange={(e) => handleChange('skip_weekends', e.target.checked)}
+                    className="rounded border-gray-300"
+                  />
+                  <span className="text-sm">Skip Weekends</span>
+                </label>
+              </div>
+
+              <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
+                <div className="flex items-start gap-2">
+                  <Clock className="w-4 h-4 text-blue-600 mt-0.5" />
+                  <div className="text-sm">
+                    <p className="font-medium text-blue-800">How Cutoff Time Works:</p>
+                    <ul className="text-blue-700 mt-2 space-y-1">
+                      <li>• <strong>Before Cutoff:</strong> System searches from yesterday's cutoff to now</li>
+                      <li>• <strong>After Cutoff:</strong> System searches from today's cutoff to now</li>
+                      <li>• <strong>Example:</strong> If cutoff is 5:00 PM and it's 3:00 PM, search from yesterday 5:00 PM</li>
+                      <li>• <strong>Example:</strong> If cutoff is 5:00 PM and it's 7:00 PM, search from today 5:00 PM</li>
+                      <li>• <strong>Weekends:</strong> Automatically skipped if enabled (Sat/Sun → next Monday)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Legacy Time Settings - Hidden by default */}
+          <div className="hidden">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Clock className="w-5 h-5" />
+              Legacy Time Settings
+            </h3>
+            
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Email Check Lookback (Hours) - Legacy
+                </label>
+                <input
+                  type="number"
+                  value={config.check_lookback_hours}
+                  onChange={(e) => handleChange('check_lookback_hours', parseInt(e.target.value) || 24)}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  min="1"
+                  max="168"
+                />
+                <p className="text-xs text-gray-500 mt-1">
+                  Legacy: How many hours back to search for emails (1-168 hours)
+                </p>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <label className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={config.force_local_time}
+                    onChange={(e) => handleChange('force_local_time', e.target.checked)}
+                    className="rounded border-gray-300"
+                  />
+                  <span className="text-sm">Use Local Time</span>
+                </label>
+
+                <label className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={config.auto_detect_timezone}
+                    onChange={(e) => handleChange('auto_detect_timezone', e.target.checked)}
+                    className="rounded border-gray-300"
+                    disabled={config.force_local_time}
+                  />
+                  <span className="text-sm">Auto-detect Server Timezone</span>
+                </label>
+              </div>
+
+              {!config.force_local_time && !config.auto_detect_timezone && (
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Manual Timezone Offset (Minutes)
+                  </label>
+                  <input
+                    type="number"
+                    value={config.server_timezone_offset}
+                    onChange={(e) => handleChange('server_timezone_offset', parseInt(e.target.value) || 0)}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    min="-720"
+                    max="720"
+                  />
+                  <p className="text-xs text-gray-500 mt-1">
+                    Server time offset from local time in minutes (-720 to +720)
+                  </p>
+                </div>
+              )}
+
+              <div className="p-3 bg-amber-50 rounded-lg border border-amber-200">
+                <div className="flex items-start gap-2">
+                  <Globe className="w-4 h-4 text-amber-600 mt-0.5" />
+                  <div className="text-sm">
+                    <p className="font-medium text-amber-800">Timezone Configuration:</p>
+                    <ul className="text-amber-700 mt-1 space-y-1">
+                      <li>• <strong>Use Local Time:</strong> Recommended for most users - searches based on your system time</li>
+                      <li>• <strong>Auto-detect:</strong> Automatically detects email server timezone differences</li>
+                      <li>• <strong>Manual Offset:</strong> Set manual timezone difference if auto-detection fails</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

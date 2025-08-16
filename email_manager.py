@@ -18,6 +18,8 @@ import shutil
 from datetime import datetime, timedelta
 import hashlib
 import re
+from timezone_utils import TimezoneConverter
+from cutoff_time_utils import CutoffTimeManager
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -34,6 +36,8 @@ class EmailManager:
         self.connection = None
         self.config = None
         self.known_customers = None  # Cache for known customer emails
+        self.timezone_converter = TimezoneConverter(db_path)  # Add timezone converter
+        self.cutoff_manager = CutoffTimeManager(db_path)  # Add cutoff time manager
         
     def get_email_config(self, config_name: str = "default") -> Dict[str, Any]:
         """Get email configuration from database"""
@@ -186,7 +190,7 @@ class EmailManager:
             return False
     
     def fetch_unread_emails(self, folder: str = "INBOX") -> List[Dict[str, Any]]:
-        """Fetch unread emails with enhanced filtering"""
+        """Fetch unread emails with enhanced filtering and configurable time"""
         emails = []
         
         try:
@@ -199,12 +203,36 @@ class EmailManager:
             # Select folder
             self.connection.select(folder)
             
-            # Calculate 24 hours ago date for filtering
-            yesterday = datetime.now() - timedelta(days=1)
-            date_str = yesterday.strftime("%d-%b-%Y")
+            # Get email search window based on daily cutoff time
+            start_time, end_time = self.cutoff_manager.get_email_search_window(self.config)
             
-            # Search for recent unread emails
-            search_criteria = f'(UNSEEN SINCE "{date_str}")'
+            # Convert times to server timezone if needed
+            if not self.config.get('force_local_time', True):
+                # Auto-detect timezone offset if configured
+                if self.config.get('auto_detect_timezone', True):
+                    detected_offset = self.timezone_converter.detect_server_timezone_offset(self.connection)
+                    logger.info(f"Detected server timezone offset: {detected_offset} minutes")
+                
+                start_time = self.timezone_converter.convert_local_to_server_time(start_time, self.config)
+                end_time = self.timezone_converter.convert_local_to_server_time(end_time, self.config)
+            
+            # Format dates for IMAP search
+            start_date_str = self.cutoff_manager.format_imap_date(start_time)
+            end_date_str = self.cutoff_manager.format_imap_date(end_time)
+            
+            logger.info(f"=== EMAIL SEARCH WINDOW (CUTOFF-BASED) ===")
+            logger.info(f"Daily cutoff time: {self.config.get('daily_cutoff_time', '17:00')}")
+            logger.info(f"Search window: {start_time} to {end_time}")
+            logger.info(f"IMAP search: {start_date_str} to {end_date_str}")
+            logger.info(f"Skip weekends: {self.config.get('skip_weekends', True)}")
+            
+            # Build IMAP search criteria
+            if start_date_str == end_date_str:
+                # Same day search
+                search_criteria = f'(UNSEEN ON "{start_date_str}")'
+            else:
+                # Date range search
+                search_criteria = f'(UNSEEN SINCE "{start_date_str}" BEFORE "{end_date_str}")'
             
             _, message_ids = self.connection.search(None, search_criteria)
             if not message_ids[0]:
@@ -543,6 +571,9 @@ class EmailManager:
             return results
         
         try:
+            # Update last check time before fetching
+            config_name = self.config.get('config_name', 'default')
+            
             # Fetch unread emails
             folders = self.config.get('folders', 'INBOX').split(',')
             
@@ -560,7 +591,11 @@ class EmailManager:
                     if not self.config.get('keep_unread'):
                         self.mark_as_read(email_data['msg_id'])
             
+            # Update last cutoff check time after successful fetch
+            current_time = datetime.now()
+            self.cutoff_manager.update_last_cutoff_check(config_name, current_time)
             results['success'] = True
+            results['last_cutoff_check'] = current_time.isoformat()
             
         except Exception as e:
             results['errors'].append(str(e))
