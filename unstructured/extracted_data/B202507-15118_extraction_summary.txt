@@ -1,0 +1,40 @@
+
+UNSTRUCTURED.IO PDF EXTRACTION SUMMARY
+======================================
+
+File: B202507-15118.pdf
+Extraction Time: 2025-08-13T10:54:19.395581
+Library: unstructured.io
+Strategy: hi_res
+Total Elements: 3
+
+ELEMENT BREAKDOWN:
+- Text Blocks: 3
+- Tables: 0
+- Titles: 0
+- Headers: 0
+- Footers: 0
+- Images: 0
+
+EXTRACTED TITLES:
+
+EXTRACTED TABLES:
+
+RAW TEXT SAMPLE (first 500 chars):
+MYTHOS URBAN GREEK EATERY
+
+The Square City Walk, B08-00-02 Tel : +971 4 399 8144 www.mythosdubai.com TRN Number : 100548028800003
+
+PURCHASE ORDER
+
+ATRADE MENA TRADING LLC Order No: B202507-15118 THIS ORDER NUMBER MUST APPEAR ON EACH PACKAGE, MR AHMAD - 058 550 9150 PACKAGE SLIP, DELIVERY NOTE AND INVOICE Order Date: 26.07.2025 Delivery Date: 28.07.2025 TEL: Request No: i25-64935 Fax: Requested By: Mythos CW Kitchen
+
+DELIVERY TO : Mythos Urban Greek Eatery,B08-00-02,The Square City Walk, Dubai
+. ...
+
+RAW TEXT LENGTH: 1206 characters
+
+EXTRACTION OPTIONS USED:
+- Extract Images: False
+- Extract Tables: True
+- Chunk by Title: True

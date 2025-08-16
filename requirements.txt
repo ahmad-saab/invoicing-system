@@ -1,0 +1,33 @@
+# Invoice Parser System Requirements
+# Version 4.0 - With Unstructured.io Integration
+
+# API Server Dependencies
+fastapi==0.117.0
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+
+# PDF Processing - Legacy
+pdfplumber==0.11.4
+PyPDF2==3.0.1
+
+# PDF Processing - New (Unstructured.io)
+# Note: This installs many ML dependencies (torch, transformers, etc.)
+# Install with: pip install "unstructured[pdf]"
+unstructured[pdf]==0.18.11
+
+# Document Processing
+python-docx==0.8.11
+openpyxl==3.1.2
+beautifulsoup4==4.12.2
+lxml==4.9.3
+
+# Database (built-in with Python)
+# sqlite3 - included in Python standard library
+
+# Utilities
+python-dateutil==2.9.0.post0
+typing-extensions==4.14.1
+
+# Optional: For development
+# pandas - for data analysis
+# jupyter - for interactive development

@@ -1,0 +1,52 @@
+
+UNSTRUCTURED.IO PDF EXTRACTION SUMMARY
+======================================
+
+File: Atrade.pdf
+Extraction Time: 2025-08-13T10:52:23.139714
+Library: unstructured.io
+Strategy: hi_res
+Total Elements: 5
+
+ELEMENT BREAKDOWN:
+- Text Blocks: 5
+- Tables: 0
+- Titles: 0
+- Headers: 0
+- Footers: 0
+- Images: 0
+
+EXTRACTED TITLES:
+
+EXTRACTED TABLES:
+
+RAW TEXT SAMPLE (first 500 chars):
+CIPRIANI S&S DUBAI
+
+PURCHASE ORDER
+
+VAT Reg. No. : 100325049300003
+
+ATRADE MENA TRADING L.L.C ABSTRACT STAR BUSINESS CENTER 205, CONTROL TOWER MOTOR CITY 104058943200003 Tel: 054-7097589 Fax:
+
+Order No: B202508-05248
+
+Order Date: 12.08.2025
+
+Requested By: CIPRIANI FOOD Request No.: i25-20777 Page: 1/1
+
+Delivery To: CIPRIANI RESTAURANT, DIFC
+
+Delivery Date: 13.08.2025
+
+Article Unit Qty Unit Price TIN 10 LT 8.00 85.00 NET TOTAL AED VAT 5% AED GRAND TOTAL AED Total
+
+SUNFLOWER OIL (TIN 05LT)
+Amt in ...
+
+RAW TEXT LENGTH: 2025 characters
+
+EXTRACTION OPTIONS USED:
+- Extract Images: False
+- Extract Tables: True
+- Chunk by Title: True

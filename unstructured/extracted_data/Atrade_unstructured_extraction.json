@@ -1,0 +1,78 @@
+{
+  "file_info": {
+    "filename": "Atrade.pdf",
+    "filepath": "../test lpos/Atrade.pdf",
+    "extraction_timestamp": "2025-08-13T10:52:23.139714",
+    "total_elements": 5,
+    "extraction_library": "unstructured.io",
+    "extraction_strategy": "hi_res"
+  },
+  "extraction_options": {
+    "extract_images": false,
+    "extract_tables": true,
+    "chunk_by_title": true
+  },
+  "elements": [
+    {
+      "type": "CompositeElement",
+      "text": "CIPRIANI S&S DUBAI\n\nPURCHASE ORDER\n\nVAT Reg. No. : 100325049300003\n\nATRADE MENA TRADING L.L.C ABSTRACT STAR BUSINESS CENTER 205, CONTROL TOWER MOTOR CITY 104058943200003 Tel: 054-7097589 Fax:\n\nOrder No: B202508-05248\n\nOrder Date: 12.08.2025\n\nRequested By: CIPRIANI FOOD Request No.: i25-20777 Page: 1/1\n\nDelivery To: CIPRIANI RESTAURANT, DIFC\n\nDelivery Date: 13.08.2025\n\nArticle Unit Qty Unit Price TIN 10 LT 8.00 85.00 NET TOTAL AED VAT 5% AED GRAND TOTAL AED Total\n\nSUNFLOWER OIL (TIN 05LT)",
+      "metadata": "<unstructured.documents.elements.ElementMetadata object at 0x7988cd35b0d0>"
+    },
+    {
+      "type": "CompositeElement",
+      "text": "Amt in Words : AED SIX HUNDRED EIGHTY\n\nGENERAL DELIVERY INSTRUCTIONS\n\n1. Please acknowledge the Receipt Of this Order With Delivery Date.\n\n2. Show the Order Number on all Invoices, Packages, Shipping Document and Correspondence.\n\n3. The Management deserves the right to reject the delivery if the Terms and Conditions are not adhered to.\n\n4. In case of any documents delayed , demurrage charge will be for Suppliers Account.\n\n5. The Order is valid only if approved by all signatories.",
+      "metadata": "<unstructured.documents.elements.ElementMetadata object at 0x7988cd35afd0>"
+    },
+    {
+      "type": "CompositeElement",
+      "text": "6. Payment will be as per the Payment Terms and Conditions from the Date of Receipt of the Invoice.\n\n7. Delivery time will be from 0800 HRS to 1500 HRS except Fridays.\n\nFOOD ITEMS\n\n1. All Food Items to be supplied as per HACCP Requirement.\n\n2. Individual Labelling with expiry date should be on each packaging as per the Dubai Municipality Regulation and minimum shelf life of 3 months.",
+      "metadata": "<unstructured.documents.elements.ElementMetadata object at 0x7988cd35ae50>"
+    },
+    {
+      "type": "CompositeElement",
+      "text": "3. If the goods or services as per the this order is not delivered within the stipilated delivery date, then the company reserves right to cancel the order immediately and procure those goods from open market sources. In the event such procurement results at a cost higher than this purchase order cost, the supplier will be responsible to indemnify such cost.",
+      "metadata": "<unstructured.documents.elements.ElementMetadata object at 0x7988cd35b150>"
+    },
+    {
+      "type": "CompositeElement",
+      "text": "Vijay Kamble\n\nCipriani Purchasing Manager\n\nThis is a system generated Purchase Order authorized by the management of CIPRIANI Restaurants LLC, DIFC and does not require signatures.\n\nCIPRIANI RESTAURANT L.L.C\n\nP.O.BOX 476427, DUBAI, UAE. | TEL : +971 509841856 | FAX :\n\n680.00\n\n680.00\n\n34.00\n\n714.00",
+      "metadata": "<unstructured.documents.elements.ElementMetadata object at 0x7988cd35b9d0>"
+    }
+  ],
+  "structured_data": {
+    "text_blocks": [
+      {
+        "text": "CIPRIANI S&S DUBAI\n\nPURCHASE ORDER\n\nVAT Reg. No. : 100325049300003\n\nATRADE MENA TRADING L.L.C ABSTRACT STAR BUSINESS CENTER 205, CONTROL TOWER MOTOR CITY 104058943200003 Tel: 054-7097589 Fax:\n\nOrder No: B202508-05248\n\nOrder Date: 12.08.2025\n\nRequested By: CIPRIANI FOOD Request No.: i25-20777 Page: 1/1\n\nDelivery To: CIPRIANI RESTAURANT, DIFC\n\nDelivery Date: 13.08.2025\n\nArticle Unit Qty Unit Price TIN 10 LT 8.00 85.00 NET TOTAL AED VAT 5% AED GRAND TOTAL AED Total\n\nSUNFLOWER OIL (TIN 05LT)",
+        "type": "CompositeElement",
+        "metadata": "<unstructured.documents.elements.ElementMetadata object at 0x7988cd35b0d0>"
+      },
+      {
+        "text": "Amt in Words : AED SIX HUNDRED EIGHTY\n\nGENERAL DELIVERY INSTRUCTIONS\n\n1. Please acknowledge the Receipt Of this Order With Delivery Date.\n\n2. Show the Order Number on all Invoices, Packages, Shipping Document and Correspondence.\n\n3. The Management deserves the right to reject the delivery if the Terms and Conditions are not adhered to.\n\n4. In case of any documents delayed , demurrage charge will be for Suppliers Account.\n\n5. The Order is valid only if approved by all signatories.",
+        "type": "CompositeElement",
+        "metadata": "<unstructured.documents.elements.ElementMetadata object at 0x7988cd35afd0>"
+      },
+      {
+        "text": "6. Payment will be as per the Payment Terms and Conditions from the Date of Receipt of the Invoice.\n\n7. Delivery time will be from 0800 HRS to 1500 HRS except Fridays.\n\nFOOD ITEMS\n\n1. All Food Items to be supplied as per HACCP Requirement.\n\n2. Individual Labelling with expiry date should be on each packaging as per the Dubai Municipality Regulation and minimum shelf life of 3 months.",
+        "type": "CompositeElement",
+        "metadata": "<unstructured.documents.elements.ElementMetadata object at 0x7988cd35ae50>"
+      },
+      {
+        "text": "3. If the goods or services as per the this order is not delivered within the stipilated delivery date, then the company reserves right to cancel the order immediately and procure those goods from open market sources. In the event such procurement results at a cost higher than this purchase order cost, the supplier will be responsible to indemnify such cost.",
+        "type": "CompositeElement",
+        "metadata": "<unstructured.documents.elements.ElementMetadata object at 0x7988cd35b150>"
+      },
+      {
+        "text": "Vijay Kamble\n\nCipriani Purchasing Manager\n\nThis is a system generated Purchase Order authorized by the management of CIPRIANI Restaurants LLC, DIFC and does not require signatures.\n\nCIPRIANI RESTAURANT L.L.C\n\nP.O.BOX 476427, DUBAI, UAE. | TEL : +971 509841856 | FAX :\n\n680.00\n\n680.00\n\n34.00\n\n714.00",
+        "type": "CompositeElement",
+        "metadata": "<unstructured.documents.elements.ElementMetadata object at 0x7988cd35b9d0>"
+      }
+    ],
+    "tables": [],
+    "titles": [],
+    "headers": [],
+    "footers": [],
+    "images": [],
+    "metadata": [],
+    "raw_text": "CIPRIANI S&S DUBAI\n\nPURCHASE ORDER\n\nVAT Reg. No. : 100325049300003\n\nATRADE MENA TRADING L.L.C ABSTRACT STAR BUSINESS CENTER 205, CONTROL TOWER MOTOR CITY 104058943200003 Tel: 054-7097589 Fax:\n\nOrder No: B202508-05248\n\nOrder Date: 12.08.2025\n\nRequested By: CIPRIANI FOOD Request No.: i25-20777 Page: 1/1\n\nDelivery To: CIPRIANI RESTAURANT, DIFC\n\nDelivery Date: 13.08.2025\n\nArticle Unit Qty Unit Price TIN 10 LT 8.00 85.00 NET TOTAL AED VAT 5% AED GRAND TOTAL AED Total\n\nSUNFLOWER OIL (TIN 05LT)\nAmt in Words : AED SIX HUNDRED EIGHTY\n\nGENERAL DELIVERY INSTRUCTIONS\n\n1. Please acknowledge the Receipt Of this Order With Delivery Date.\n\n2. Show the Order Number on all Invoices, Packages, Shipping Document and Correspondence.\n\n3. The Management deserves the right to reject the delivery if the Terms and Conditions are not adhered to.\n\n4. In case of any documents delayed , demurrage charge will be for Suppliers Account.\n\n5. The Order is valid only if approved by all signatories.\n6. Payment will be as per the Payment Terms and Conditions from the Date of Receipt of the Invoice.\n\n7. Delivery time will be from 0800 HRS to 1500 HRS except Fridays.\n\nFOOD ITEMS\n\n1. All Food Items to be supplied as per HACCP Requirement.\n\n2. Individual Labelling with expiry date should be on each packaging as per the Dubai Municipality Regulation and minimum shelf life of 3 months.\n3. If the goods or services as per the this order is not delivered within the stipilated delivery date, then the company reserves right to cancel the order immediately and procure those goods from open market sources. In the event such procurement results at a cost higher than this purchase order cost, the supplier will be responsible to indemnify such cost.\nVijay Kamble\n\nCipriani Purchasing Manager\n\nThis is a system generated Purchase Order authorized by the management of CIPRIANI Restaurants LLC, DIFC and does not require signatures.\n\nCIPRIANI RESTAURANT L.L.C\n\nP.O.BOX 476427, DUBAI, UAE. | TEL : +971 509841856 | FAX :\n\n680.00\n\n680.00\n\n34.00\n\n714.00\n"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "hooks": {
+    "user-prompt-submit": [
+      {
+        "pattern": "^/csp --fix (.+)$",
+        "command": "echo '=== CPS Standards Application ===' && cat csp.md 2>/dev/null || echo 'CPS standards: Clean code, Windows deps, proper comments' && echo '\n=== Code to fix: $1 ==='"
+      },
+      {
+        "pattern": "^/csp --check (.+)$",
+        "command": "echo '=== CPS Code Review ===' && echo 'Checking code against CPS standards: $1'"
+      },
+      {
+        "pattern": "^/debug --setup$",
+        "command": "mkdir -p debug && echo 'Debug folder created for testing scripts' && ls -la debug 2>/dev/null || dir debug"
+      },
+      {
+        "pattern": "^/debug --clean$",
+        "command": "rm -rf debug/* 2>/dev/null || del /q debug\\* && echo 'Debug folder cleaned'"
+      },
+      {
+        "pattern": "^/doc --step (.+)$",
+        "command": "echo '=== Documenting Step ===' && echo 'Step: $1' && echo 'Adding to Isys.md documentation'"
+      },
+      {
+        "pattern": "^/windows --deps (.+)$",
+        "command": "echo '=== Windows Dependencies Check ===' && echo 'Checking Windows compatibility for: $1'"
+      },
+      {
+        "pattern": "^/clean --code (.+)$",
+        "command": "echo '=== Clean Code Review ===' && echo 'Applying clean code principles to: $1' && echo 'No patches - full clean implementation'"
+      },
+      {
+        "pattern": "^/help --commands$",
+        "command": "echo 'Available commands:\n/csp --fix [code]\n/csp --check [code]\n/debug --setup\n/debug --clean\n/doc --step [description]\n/windows --deps [package]\n/clean --code [file]'"
+      }
+    ]
+  },
+  "verbose": true
+}

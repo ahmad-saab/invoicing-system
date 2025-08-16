@@ -1,0 +1,289 @@
+# ISYS - Invoice Management System .gitignore
+
+# ===========================================
+# ENVIRONMENT & CONFIGURATION FILES
+# ===========================================
+# Environment files with sensitive data
+.env
+.env.local
+.env.production
+.env.staging
+
+# Configuration files with credentials
+config.ini
+config.json
+secrets.json
+credentials.json
+
+# ===========================================
+# PYTHON FILES
+# ===========================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# ===========================================
+# DATABASE FILES
+# ===========================================
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# Database backups
+*.sql.backup
+*.dump
+*.bak
+
+# ===========================================
+# LOG FILES
+# ===========================================
+# Application logs
+logs/
+*.log
+*.log.*
+
+# System logs
+*.out
+*.err
+
+# ===========================================
+# UPLOADED & TEMPORARY FILES
+# ===========================================
+# File uploads
+uploads/
+temp/
+tmp/
+attachments/
+
+# Processed files
+processed/
+output/
+exports/
+
+# Cache directories
+cache/
+.cache/
+
+# ===========================================
+# BACKUP & ARCHIVE FILES
+# ===========================================
+# Backup directories
+backups/
+backup/
+*.backup
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# ===========================================
+# DEVELOPMENT TOOLS
+# ===========================================
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ===========================================
+# VERSION FOLDERS (EXCLUDE FROM REPOSITORY)
+# ===========================================
+# Exclude old version directories
+invoice_system_version_1/
+invoice_system_version_2/
+invoice_system_version_3/
+invoice_system_version_4/
+invoice_system_version_5/
+
+# Exclude cloned repositories
+ccusage/
+
+# ===========================================
+# APPLICATION SPECIFIC
+# ===========================================
+# Email processing temp files
+email_temp/
+*.eml
+
+# LPO processing
+lpo_temp/
+parsed_lpos/
+
+# HTML files (LPO attachments - sensitive data)
+*.htm
+*.html
+# Exception: Keep template HTML files
+!templates/*.html
+!static/*.html
+
+# Excel files with customer data
+customer_data.xlsx
+customers.xls*
+import_data.*
+
+# ===========================================
+# SECURITY & CREDENTIALS
+# ===========================================
+# SSH keys
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# OAuth tokens
+token.json
+refresh_token.json
+access_token.json
+
+# API keys
+api_keys.txt
+secrets.txt
+.secrets
+
+# ===========================================
+# MONITORING & METRICS
+# ===========================================
+# Metrics data
+metrics/
+prometheus/
+grafana/
+
+# Performance profiling
+*.prof
+*.pprof
+
+# ===========================================
+# DOCUMENTATION BUILDS
+# ===========================================
+# Sphinx documentation
+docs/_build/
+
+# MkDocs documentation
+/site
+
+# ===========================================
+# NODE.JS (if using frontend tools)
+# ===========================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# ===========================================
+# TESTING
+# ===========================================
+# Test databases
+test_*.db
+*_test.db
+
+# Test output files
+test_results/
+test_reports/
+
+# Coverage reports
+.coverage
+coverage/
+
+# ===========================================
+# DEPLOYMENT
+# ===========================================
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Kubernetes
+*.secret.yaml
+*-secret.yaml
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# ===========================================
+# EXCEPTIONS (files to keep)
+# ===========================================
+# Keep example/template files
+!.env.example
+!config.example.json
+!docker-compose.example.yml
+
+# Keep documentation
+!README.md
+!CHANGELOG.md
+!LICENSE
+!docs/
+
+# Keep schema files
+!schema.sql
+!migrations/
+
+# Keep empty directories with .gitkeep
+!.gitkeep

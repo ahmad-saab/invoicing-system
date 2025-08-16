@@ -1,0 +1,48 @@
+{
+  "file_info": {
+    "filename": "F5.pdf",
+    "filepath": "../test lpos/F5.pdf",
+    "extraction_timestamp": "2025-08-13T10:52:03.490551",
+    "total_elements": 2,
+    "extraction_library": "unstructured.io",
+    "extraction_strategy": "hi_res"
+  },
+  "extraction_options": {
+    "extract_images": false,
+    "extract_tables": true,
+    "chunk_by_title": true
+  },
+  "elements": [
+    {
+      "type": "CompositeElement",
+      "text": "8/11/25, 2:59 AM\n\nPurchase Order - Foodics\n\nEureka Restaurant & Cafe /Wingstop\n\nApproved\n\nPurchase Order (PO-047903)\n\nSupplier\n\nDestination Business Date Creator Submitter Approver Created At Delivery Date Purchase Order Total Cost Number of Items Zakher, Al Ain (2640) 2025-08-10 Zaker Alain - WS Zaker Alain - WS Zaker Alain - WS August 11, 02:58am 2025-08-13 AED 639 1\n\nItems\n\nAvailable",
+      "metadata": "<unstructured.documents.elements.ElementMetadata object at 0x7005437690d0>"
+    },
+    {
+      "type": "CompositeElement",
+      "text": "Name SKU Quantity Cost Per Unit Quantity F5 Bunge Frying 1604 16 Gal 10 Ltr AED 71 9 Gal 10 Ltr Total Cost AED 639\n\nOil\n\nhttps://console.foodics.com/inventory/purchase-orders/9f9aacc0-ef87-4389-bcc6-7cb333d4c4ab\n\nA- TRADE\n\n1/2\n\n8/11/25, 2:59 AM\n\nPurchase Order - Foodics\n\nhttps://console.foodics.com/inventory/purchase-orders/9f9aacc0-ef87-4389-bcc6-7cb333d4c4ab\n\nhttps://console.foodics.com/inventory/purchase-orders/9f9aacc0-ef87-4389-bcc6-7cb333d4c4ab\n\n2/2",
+      "metadata": "<unstructured.documents.elements.ElementMetadata object at 0x7005437692d0>"
+    }
+  ],
+  "structured_data": {
+    "text_blocks": [
+      {
+        "text": "8/11/25, 2:59 AM\n\nPurchase Order - Foodics\n\nEureka Restaurant & Cafe /Wingstop\n\nApproved\n\nPurchase Order (PO-047903)\n\nSupplier\n\nDestination Business Date Creator Submitter Approver Created At Delivery Date Purchase Order Total Cost Number of Items Zakher, Al Ain (2640) 2025-08-10 Zaker Alain - WS Zaker Alain - WS Zaker Alain - WS August 11, 02:58am 2025-08-13 AED 639 1\n\nItems\n\nAvailable",
+        "type": "CompositeElement",
+        "metadata": "<unstructured.documents.elements.ElementMetadata object at 0x7005437690d0>"
+      },
+      {
+        "text": "Name SKU Quantity Cost Per Unit Quantity F5 Bunge Frying 1604 16 Gal 10 Ltr AED 71 9 Gal 10 Ltr Total Cost AED 639\n\nOil\n\nhttps://console.foodics.com/inventory/purchase-orders/9f9aacc0-ef87-4389-bcc6-7cb333d4c4ab\n\nA- TRADE\n\n1/2\n\n8/11/25, 2:59 AM\n\nPurchase Order - Foodics\n\nhttps://console.foodics.com/inventory/purchase-orders/9f9aacc0-ef87-4389-bcc6-7cb333d4c4ab\n\nhttps://console.foodics.com/inventory/purchase-orders/9f9aacc0-ef87-4389-bcc6-7cb333d4c4ab\n\n2/2",
+        "type": "CompositeElement",
+        "metadata": "<unstructured.documents.elements.ElementMetadata object at 0x7005437692d0>"
+      }
+    ],
+    "tables": [],
+    "titles": [],
+    "headers": [],
+    "footers": [],
+    "images": [],
+    "metadata": [],
+    "raw_text": "8/11/25, 2:59 AM\n\nPurchase Order - Foodics\n\nEureka Restaurant & Cafe /Wingstop\n\nApproved\n\nPurchase Order (PO-047903)\n\nSupplier\n\nDestination Business Date Creator Submitter Approver Created At Delivery Date Purchase Order Total Cost Number of Items Zakher, Al Ain (2640) 2025-08-10 Zaker Alain - WS Zaker Alain - WS Zaker Alain - WS August 11, 02:58am 2025-08-13 AED 639 1\n\nItems\n\nAvailable\nName SKU Quantity Cost Per Unit Quantity F5 Bunge Frying 1604 16 Gal 10 Ltr AED 71 9 Gal 10 Ltr Total Cost AED 639\n\nOil\n\nhttps://console.foodics.com/inventory/purchase-orders/9f9aacc0-ef87-4389-bcc6-7cb333d4c4ab\n\nA- TRADE\n\n1/2\n\n8/11/25, 2:59 AM\n\nPurchase Order - Foodics\n\nhttps://console.foodics.com/inventory/purchase-orders/9f9aacc0-ef87-4389-bcc6-7cb333d4c4ab\n\nhttps://console.foodics.com/inventory/purchase-orders/9f9aacc0-ef87-4389-bcc6-7cb333d4c4ab\n\n2/2\n"
+  }
+}

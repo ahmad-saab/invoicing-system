@@ -1,0 +1,48 @@
+
+UNSTRUCTURED.IO PDF EXTRACTION SUMMARY
+======================================
+
+File: F5.pdf
+Extraction Time: 2025-08-13T10:52:03.490551
+Library: unstructured.io
+Strategy: hi_res
+Total Elements: 2
+
+ELEMENT BREAKDOWN:
+- Text Blocks: 2
+- Tables: 0
+- Titles: 0
+- Headers: 0
+- Footers: 0
+- Images: 0
+
+EXTRACTED TITLES:
+
+EXTRACTED TABLES:
+
+RAW TEXT SAMPLE (first 500 chars):
+8/11/25, 2:59 AM
+
+Purchase Order - Foodics
+
+Eureka Restaurant & Cafe /Wingstop
+
+Approved
+
+Purchase Order (PO-047903)
+
+Supplier
+
+Destination Business Date Creator Submitter Approver Created At Delivery Date Purchase Order Total Cost Number of Items Zakher, Al Ain (2640) 2025-08-10 Zaker Alain - WS Zaker Alain - WS Zaker Alain - WS August 11, 02:58am 2025-08-13 AED 639 1
+
+Items
+
+Available
+Name SKU Quantity Cost Per Unit Quantity F5 Bunge Frying 1604 16 Gal 10 Ltr AED 71 9 Gal 10 Ltr Total Cost AED...
+
+RAW TEXT LENGTH: 850 characters
+
+EXTRACTION OPTIONS USED:
+- Extract Images: False
+- Extract Tables: True
+- Chunk by Title: True

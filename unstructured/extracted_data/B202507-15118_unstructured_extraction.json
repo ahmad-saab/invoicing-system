@@ -1,0 +1,58 @@
+{
+  "file_info": {
+    "filename": "B202507-15118.pdf",
+    "filepath": "../test lpos/B202507-15118.pdf",
+    "extraction_timestamp": "2025-08-13T10:54:19.395581",
+    "total_elements": 3,
+    "extraction_library": "unstructured.io",
+    "extraction_strategy": "hi_res"
+  },
+  "extraction_options": {
+    "extract_images": false,
+    "extract_tables": true,
+    "chunk_by_title": true
+  },
+  "elements": [
+    {
+      "type": "CompositeElement",
+      "text": "MYTHOS URBAN GREEK EATERY\n\nThe Square City Walk, B08-00-02 Tel : +971 4 399 8144 www.mythosdubai.com TRN Number : 100548028800003\n\nPURCHASE ORDER\n\nATRADE MENA TRADING LLC Order No: B202507-15118 THIS ORDER NUMBER MUST APPEAR ON EACH PACKAGE, MR AHMAD - 058 550 9150 PACKAGE SLIP, DELIVERY NOTE AND INVOICE Order Date: 26.07.2025 Delivery Date: 28.07.2025 TEL: Request No: i25-64935 Fax: Requested By: Mythos CW Kitchen\n\nDELIVERY TO : Mythos Urban Greek Eatery,B08-00-02,The Square City Walk, Dubai",
+      "metadata": "<unstructured.documents.elements.ElementMetadata object at 0x7accaac4f550>"
+    },
+    {
+      "type": "CompositeElement",
+      "text": ". Article Unit Qty Discount Unit Price Total FRYING OIL BUNGE PRO F10 1x10LTR 5.00 0.00 85.00 425.00 RAPESEED OIL BUNGE PRO CUISINE 1x10LTR 1.00 0.00 80.00 80.00 TOTAL NET TOTAL VAT TOTAL GROSS\n\nDELIVERY INSTRUCTIONS\n\n: RECEIVING DEPARTMENT\n\nPAYMENT CONDITIONS\n\n:\n\nDELIVERY TIME\n\n: SAT to WED 9.00 AM TO 12.00 PM",
+      "metadata": "<unstructured.documents.elements.ElementMetadata object at 0x7accaac4f650>"
+    },
+    {
+      "type": "CompositeElement",
+      "text": "CONDITIONS :-\n\nThis is a system generated LPO, all orders will be sent via email. Next day delivery from LPO date, unless urgent which means same day delivery. Unless otherwise agreed, kindly consider our order cancelled, if item is not delivered maximum 2 days. Receiving office is open from 9:00 AM To 12:00 PM only.\n\n>\n\nPURCHASING SUPERVISOR\n\nGENERAL ACCOUNTANT\n\n505.00\n\n25.25\n\n530.25\n\nPage1",
+      "metadata": "<unstructured.documents.elements.ElementMetadata object at 0x7accaac4fad0>"
+    }
+  ],
+  "structured_data": {
+    "text_blocks": [
+      {
+        "text": "MYTHOS URBAN GREEK EATERY\n\nThe Square City Walk, B08-00-02 Tel : +971 4 399 8144 www.mythosdubai.com TRN Number : 100548028800003\n\nPURCHASE ORDER\n\nATRADE MENA TRADING LLC Order No: B202507-15118 THIS ORDER NUMBER MUST APPEAR ON EACH PACKAGE, MR AHMAD - 058 550 9150 PACKAGE SLIP, DELIVERY NOTE AND INVOICE Order Date: 26.07.2025 Delivery Date: 28.07.2025 TEL: Request No: i25-64935 Fax: Requested By: Mythos CW Kitchen\n\nDELIVERY TO : Mythos Urban Greek Eatery,B08-00-02,The Square City Walk, Dubai",
+        "type": "CompositeElement",
+        "metadata": "<unstructured.documents.elements.ElementMetadata object at 0x7accaac4f550>"
+      },
+      {
+        "text": ". Article Unit Qty Discount Unit Price Total FRYING OIL BUNGE PRO F10 1x10LTR 5.00 0.00 85.00 425.00 RAPESEED OIL BUNGE PRO CUISINE 1x10LTR 1.00 0.00 80.00 80.00 TOTAL NET TOTAL VAT TOTAL GROSS\n\nDELIVERY INSTRUCTIONS\n\n: RECEIVING DEPARTMENT\n\nPAYMENT CONDITIONS\n\n:\n\nDELIVERY TIME\n\n: SAT to WED 9.00 AM TO 12.00 PM",
+        "type": "CompositeElement",
+        "metadata": "<unstructured.documents.elements.ElementMetadata object at 0x7accaac4f650>"
+      },
+      {
+        "text": "CONDITIONS :-\n\nThis is a system generated LPO, all orders will be sent via email. Next day delivery from LPO date, unless urgent which means same day delivery. Unless otherwise agreed, kindly consider our order cancelled, if item is not delivered maximum 2 days. Receiving office is open from 9:00 AM To 12:00 PM only.\n\n>\n\nPURCHASING SUPERVISOR\n\nGENERAL ACCOUNTANT\n\n505.00\n\n25.25\n\n530.25\n\nPage1",
+        "type": "CompositeElement",
+        "metadata": "<unstructured.documents.elements.ElementMetadata object at 0x7accaac4fad0>"
+      }
+    ],
+    "tables": [],
+    "titles": [],
+    "headers": [],
+    "footers": [],
+    "images": [],
+    "metadata": [],
+    "raw_text": "MYTHOS URBAN GREEK EATERY\n\nThe Square City Walk, B08-00-02 Tel : +971 4 399 8144 www.mythosdubai.com TRN Number : 100548028800003\n\nPURCHASE ORDER\n\nATRADE MENA TRADING LLC Order No: B202507-15118 THIS ORDER NUMBER MUST APPEAR ON EACH PACKAGE, MR AHMAD - 058 550 9150 PACKAGE SLIP, DELIVERY NOTE AND INVOICE Order Date: 26.07.2025 Delivery Date: 28.07.2025 TEL: Request No: i25-64935 Fax: Requested By: Mythos CW Kitchen\n\nDELIVERY TO : Mythos Urban Greek Eatery,B08-00-02,The Square City Walk, Dubai\n. Article Unit Qty Discount Unit Price Total FRYING OIL BUNGE PRO F10 1x10LTR 5.00 0.00 85.00 425.00 RAPESEED OIL BUNGE PRO CUISINE 1x10LTR 1.00 0.00 80.00 80.00 TOTAL NET TOTAL VAT TOTAL GROSS\n\nDELIVERY INSTRUCTIONS\n\n: RECEIVING DEPARTMENT\n\nPAYMENT CONDITIONS\n\n:\n\nDELIVERY TIME\n\n: SAT to WED 9.00 AM TO 12.00 PM\nCONDITIONS :-\n\nThis is a system generated LPO, all orders will be sent via email. Next day delivery from LPO date, unless urgent which means same day delivery. Unless otherwise agreed, kindly consider our order cancelled, if item is not delivered maximum 2 days. Receiving office is open from 9:00 AM To 12:00 PM only.\n\n>\n\nPURCHASING SUPERVISOR\n\nGENERAL ACCOUNTANT\n\n505.00\n\n25.25\n\n530.25\n\nPage1\n"
+  }
+}
