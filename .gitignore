@@ -162,6 +162,12 @@ invoice_system_version_5/
 # Exclude cloned repositories
 ccusage/
 
+# Claude Code related files
+.claude/
+.config/claude/
+commit.md
+CLAUDE.md
+
 # ===========================================
 # APPLICATION SPECIFIC
 # ===========================================
